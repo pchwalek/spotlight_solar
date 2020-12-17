@@ -1,0 +1,22 @@
+stm32wbxx_ll_exti.h:451:22:void LL_EXTI_DisableIT_0_31(uint32_t)	16	static
+stm32wbxx_ll_exti.h:520:22:void LL_EXTI_DisableIT_32_63(uint32_t)	16	static
+stm32wbxx_ll_rcc.h:1345:22:void LL_RCC_HSE_SetCapacitorTuning(uint32_t)	16	static
+stm32wbxx_ll_rcc.h:2893:22:void LL_RCC_ForceBackupDomainReset()	4	static
+stm32wbxx_ll_rcc.h:2903:22:void LL_RCC_ReleaseBackupDomainReset()	4	static
+stm32wbxx_ll_rcc.h:4049:26:uint32_t LL_RCC_IsActiveFlag_PINRST()	4	static
+stm32wbxx_ll_rcc.h:4059:26:uint32_t LL_RCC_IsActiveFlag_SFTRST()	4	static
+stm32wbxx_ll_bus.h:745:22:void LL_AHB3_GRP1_EnableClock(uint32_t)	24	static
+stm32wbxx_ll_ipcc.h:313:22:void LL_C1_IPCC_DisableTransmitChannel(IPCC_TypeDef*, uint32_t)	16	static
+stm32wbxx_ll_ipcc.h:382:22:void LL_C1_IPCC_DisableReceiveChannel(IPCC_TypeDef*, uint32_t)	16	static
+stm32wbxx_ll_ipcc.h:451:22:void LL_C2_IPCC_DisableTransmitChannel(IPCC_TypeDef*, uint32_t)	16	static
+stm32wbxx_ll_ipcc.h:520:22:void LL_C2_IPCC_DisableReceiveChannel(IPCC_TypeDef*, uint32_t)	16	static
+stm32wbxx_ll_ipcc.h:575:22:void LL_C1_IPCC_ClearFlag_CHx(IPCC_TypeDef*, uint32_t)	16	static
+stm32wbxx_ll_ipcc.h:646:22:void LL_C2_IPCC_ClearFlag_CHx(IPCC_TypeDef*, uint32_t)	16	static
+stm32wbxx_ll_hsem.h:233:26:uint32_t LL_HSEM_1StepLock(HSEM_TypeDef*, uint32_t)	16	static
+myMain.cpp:41:5:int myMain()	8	static
+myMain.cpp:151:6:void Reset_BackupDomain()	8	static
+myMain.cpp:170:6:void Reset_Device()	8	static
+myMain.cpp:181:6:void Reset_IPCC()	8	static
+myMain.cpp:218:6:void Init_Exti()	8	static
+myMain.cpp:228:6:void Config_HSE()	16	static
+myMain.cpp:244:6:void initClk()	80	static

@@ -1,0 +1,7 @@
+spotlight_helper.c:41:6:measMsgReceivedFromNode	16	static
+spotlight_helper.c:67:6:sendPowerMeasurement	48	static
+spotlight_helper.c:81:6:powerMeasSetup	24	static
+spotlight_helper.c:89:10:getPower	24	static
+spotlight_helper.c:106:10:getCurrent	24	static
+spotlight_helper.c:121:10:getBusVoltage	24	static
+spotlight_helper.c:136:10:getShuntVoltage	24	static
