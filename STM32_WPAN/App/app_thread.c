@@ -676,6 +676,7 @@ static void APP_THREAD_CoapNodeCalRequestHandler(void                * pContext,
 
 			if (otCoapHeaderGetCode(pHeader) == OT_COAP_CODE_PUT)
 			{
+				toggleLed(1,1,1);
 				if(receivedCalMsg.cal_fcn == CALIBRATION_START_COMMAND){
 					// TODO: start calibration
 
@@ -687,6 +688,7 @@ static void APP_THREAD_CoapNodeCalRequestHandler(void                * pContext,
 
 			if (otCoapHeaderGetCode(pHeader) == OT_COAP_CODE_GET)
 			{
+				toggleLed(1,1,1);
 				if(receivedCalMsg.cal_fcn == CALIBRATION_GET_MEAS){
 					// send measurement to Spotlight
 					// 		TODO this can be done in an ACK but doing it now in a separate PUT request to the nodeSpot resource

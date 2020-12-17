@@ -118,8 +118,8 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  APPE_Init();
   /* add threads, ... */
+  APPE_Init();
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -138,12 +138,12 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
-  /* Infinite loop */
 	osDelay(100);
 	myMain();
+  /* Infinite loop */
   for(;;)
   {
-	  osThreadFlagsWait(1,osFlagsWaitAll,osWaitForever);
+    osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
 }

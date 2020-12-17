@@ -31,6 +31,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "myMain.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,7 +41,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -58,7 +58,6 @@
 void SystemClock_Config(void);
 void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
-void powerMeasSetup(void);
 
 /* USER CODE END PFP */
 
@@ -74,11 +73,11 @@ void powerMeasSetup(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	  /**
-	   * The OPTVERR flag is wrongly set at power on
-	   * It shall be cleared before using any HAL_FLASH_xxx() api
-	   */
-	  __HAL_FLASH_CLEAR_FLAG(FLASH_FLAG_OPTVERR);
+//	  /**
+//	   * The OPTVERR flag is wrongly set at power on
+//	   * It shall be cleared before using any HAL_FLASH_xxx() api
+//	   */
+//	  __HAL_FLASH_CLEAR_FLAG(FLASH_FLAG_OPTVERR);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -88,6 +87,7 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   Reset_Device();
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -95,6 +95,7 @@ int main(void)
 
   /* USER CODE BEGIN SysInit */
   Init_Exti( );
+
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -104,7 +105,7 @@ int main(void)
   MX_RTC_Init();
   MX_USB_Device_Init();
   /* USER CODE BEGIN 2 */
-//  myMain();
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -210,7 +211,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
 
 /* USER CODE END 4 */
 

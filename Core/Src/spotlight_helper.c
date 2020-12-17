@@ -81,20 +81,28 @@ void sendPowerMeasurement(otIp6Address peerAddr, int32_t angle_1, int32_t angle_
 void powerMeasSetup(void){
 	  uint8_t packet[3];
 	  packet[0]= 0x05;
-	  packet[0]= 0x66;
-	  packet[0]= 0xD0;
-	  HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, packet, 3, 100);
+	  packet[1]= 0x66;
+	  packet[2]= 0xD0;
+	  while(HAL_OK != HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, packet, 3, 100)){
+		  osDelay(1);
+	  }
 }
 
 uint16_t getPower(){
 
   uint8_t packet = 0x03;
-  HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, &packet, 1, 100);
+//  HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, &packet, 1, 100);
+  while(HAL_OK != HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, &packet, 1, 100)){
+  		  osDelay(1);
+  	  }
 
 
   // read 1 byte, from address 0
 	  uint8_t receiveBuffer[2];
-  HAL_I2C_Master_Receive(&hi2c1, POWER_MEAS_ADDR << 1, receiveBuffer, (uint8_t)(2), 100);
+//  HAL_I2C_Master_Receive(&hi2c1, POWER_MEAS_ADDR << 1, receiveBuffer, (uint8_t)(2), 100);
+  while(HAL_OK != HAL_I2C_Master_Receive(&hi2c1, POWER_MEAS_ADDR << 1, receiveBuffer, (uint8_t)(2), 100)){
+    		  osDelay(1);
+    	  }
 
   uint16_t measurement;
   measurement = receiveBuffer[0] << 8;
@@ -120,11 +128,17 @@ uint16_t getCurrent(){
 
 uint16_t getBusVoltage(){
 	uint8_t packet = 0x02;
-	  HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, &packet, 1, 100);
+//	  HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, &packet, 1, 100);
+	  while(HAL_OK != HAL_I2C_Master_Transmit(&hi2c1, POWER_MEAS_ADDR << 1, &packet, 1, 100)){
+	    		  osDelay(1);
+	    	  }
 
   // read 1 byte, from address 0
 	  uint8_t receiveBuffer[2];
-  HAL_I2C_Master_Receive(&hi2c1, POWER_MEAS_ADDR << 1, receiveBuffer, (uint8_t)(2), 100);
+//  HAL_I2C_Master_Receive(&hi2c1, POWER_MEAS_ADDR << 1, receiveBuffer, (uint8_t)(2), 100);
+  while(HAL_OK != HAL_I2C_Master_Receive(&hi2c1, POWER_MEAS_ADDR << 1, receiveBuffer, (uint8_t)(2), 100)){
+    		  osDelay(1);
+    	  }
 
   uint16_t measurement;
   measurement = receiveBuffer[0] << 8;

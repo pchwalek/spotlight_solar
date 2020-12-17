@@ -37,15 +37,21 @@ struct ADC_DATA{
 struct ADC_DATA adc_data;
 
 //uint16_t adc_data[4];
+volatile uint16_t temp;
 
 int myMain(void){
 
 #ifdef SOLAR_SENSOR_NODE
 	#ifndef SOLAR_SENSOR_NODE_I2C_DISABLE
 
-		HAL_Delay(500);
+//		HAL_Delay(500);
 		powerMeasSetup();
 		HAL_Delay(100);
+
+//		while(1){
+//			temp = getBusVoltage();
+//			HAL_Delay(1000);
+//		}
 
 	#endif
 #else

@@ -13,10 +13,10 @@ stm32wbxx_ll_ipcc.h:520:22:void LL_C2_IPCC_DisableReceiveChannel(IPCC_TypeDef*, 
 stm32wbxx_ll_ipcc.h:575:22:void LL_C1_IPCC_ClearFlag_CHx(IPCC_TypeDef*, uint32_t)	16	static
 stm32wbxx_ll_ipcc.h:646:22:void LL_C2_IPCC_ClearFlag_CHx(IPCC_TypeDef*, uint32_t)	16	static
 stm32wbxx_ll_hsem.h:233:26:uint32_t LL_HSEM_1StepLock(HSEM_TypeDef*, uint32_t)	16	static
-myMain.cpp:41:5:int myMain()	8	static
-myMain.cpp:151:6:void Reset_BackupDomain()	8	static
-myMain.cpp:170:6:void Reset_Device()	8	static
-myMain.cpp:181:6:void Reset_IPCC()	8	static
-myMain.cpp:218:6:void Init_Exti()	8	static
-myMain.cpp:228:6:void Config_HSE()	16	static
-myMain.cpp:244:6:void initClk()	80	static
+myMain.cpp:42:5:int myMain()	8	static
+myMain.cpp:157:6:void Reset_BackupDomain()	8	static
+myMain.cpp:176:6:void Reset_Device()	8	static
+myMain.cpp:187:6:void Reset_IPCC()	8	static
+myMain.cpp:224:6:void Init_Exti()	8	static
+myMain.cpp:234:6:void Config_HSE()	16	static
+myMain.cpp:250:6:void initClk()	80	static
